@@ -13,7 +13,6 @@ const genCompChoice = () =>{
     return options[randIdx];
 }
 const drawGame = (userChoice) => {
-    console.log("game was draw");
     msg.innerText = `Game Draw both Choses ${userChoice}`;
     msg.style.backgroundColor = "#081b31";
 };
@@ -22,13 +21,11 @@ const showWinner = (userWin, compChoice, userChoice) =>{
     if(userWin){
         userScore++;
         parauser.innerText = userScore;
-        console.log("You Win!");
         msg.innerText = `You Win! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
     }else{
         compScore++;
         paracomp.innerText = compScore;
-        console.log("you lose");
         msg.innerText = `You Lose !!! ${compChoice} beats Your ${userChoice}`;
         msg.style.backgroundColor = "red";
     }
